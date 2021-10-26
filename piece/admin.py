@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Composer
+from .models import Piece
 
 # Register your models here.
-admin.site.register(Composer)
+admin.site.register(Piece)

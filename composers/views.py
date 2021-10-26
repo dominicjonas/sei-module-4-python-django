@@ -21,7 +21,7 @@ def index(request):
 class ComposerListView(views.APIView):
     def get(self, request):
         composers = Composer.objects.all()
-        serialized_composers = ComposerSerializer(composers, many=True)
+        serialized_composers = ComposerSerializer(composers, many=True, context={'request': request})
         return response.Response(serialized_composers.data, status=status.HTTP_200_OK)
 
     def post(self, request):
