@@ -13,7 +13,15 @@
     <h1>COMPOSERS</h1>
     <ul>
       {% for composer in composers %}
-      <li>{{composer.name}}</li>
+      <li>
+        <img src=" {{composer.cover_image}}" alt="" />
+        <h2>Name: {{composer.name}}</h2>
+        <h3>Period: {{composer.period}}</h3>
+        <p>Born: {{composer.born}}</p>
+        <p>Died: {{composer.died}}</p>
+      </li>
+      <hr />
+      {% endfor %}
     </ul>
   </body>
 </html>
